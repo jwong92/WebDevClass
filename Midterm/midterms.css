@@ -1,0 +1,222 @@
+/************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. DEFAULT OVERRIDES
+ * 2. USE ANYWHERE CLASSES
+ * 3. MENU STYLES
+ * 4. HEADER
+ * 5. MAIN ARTICLE
+ * 5. FOOTER
+ ***********************************************/
+
+ /** 1. DEFAULT OVERRIDES*/
+
+ html {
+   box-sizing: border-box;
+ }
+
+ *, *::before, *::after {
+   box-sizing: inherit;
+ }
+
+ body {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 15px;
+ }
+
+a {
+  text-decoration: none;
+  color: #fb145a;
+}
+
+ul {
+  list-style-type: none;
+  -webkit-padding-start: 0px;
+}
+ /** 2. USE ANYWHERE CLASSES*/
+
+.page-wrapper {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+}
+
+.rollover-link:hover {
+  text-decoration: underline;
+}
+
+/** 3. MENU STYLES*/
+
+.menu li {
+  display:inline-block;
+  padding: 40px 20px;
+  text-transform: uppercase;
+}
+
+.menu li:last-child {
+  padding-right:0;
+}
+
+.menu a {
+  color: black;
+  font-weight: bold;
+}
+
+#case-study {
+  color:#00a99d;
+}
+
+/** 4. HEADER*/
+
+#main-logo {
+  float: left;
+  padding: 20px 20px;
+}
+
+#main-nav {
+  float:right;
+}
+
+#header {
+  border-bottom: 1px solid black;
+  overflow: hidden;
+}
+
+/** 5. MAIN ARTICLE*/
+
+.col-70 {
+  width: 70%;
+  float:left;
+  padding-right: 3%;
+}
+
+.col-30 {
+  width: 30%;
+  float: right;
+}
+
+#main-title {
+  font-family: 'Times New Roman', Times, serif;
+  color: #00a99d;
+  font-weight: normal;
+  font-size: 2em;
+}
+
+#main-books-img {
+  float:right;
+  padding: 0 1em 1em 1em;
+}
+
+.author-date {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.text-link {
+  text-decoration: underline;
+  color: #474599;
+}
+
+.main-text {
+  margin-top:30px;
+}
+
+/** 5. SIDEBAR*/
+
+.section-header {
+  font-weight:normal;
+  text-transform: uppercase;
+  color:white;
+  background-color: #fb145a;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.list-of-links a {
+  color:#474599;
+}
+
+.list-of-links li{
+  padding: 5px;
+  border-bottom: 1px solid #fb145a;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#featured-post-bg {
+  background-color: #474599;
+}
+
+.block-list-img {
+  float: left;
+  padding: 0 10px 10px 10px;
+}
+
+.block-list-title {
+  color: #00a99d;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 19px;
+  font-weight:normal;
+  margin-bottom: 0;
+
+}
+.block-list-text {
+  margin-top: 9px;
+  font-size: 13px;
+}
+
+.block-list-item a:last-child {
+  text-decoration: underline;
+  padding-left: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.list-of-links li:last-child a{
+  color:#fb145a;
+}
+
+/** FOOTER*/
+
+#footer {
+  clear:both;
+}
+
+.footer-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight:normal;
+}
+
+.footer-block {
+  border: 1px solid #fb145a;
+  background-color: #ffd4e1;
+  margin: 0 10px 10px 0;
+  padding: 5px;
+}
+
+.footer-time-author {
+  color: #fb145a;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 5px;
+}
+
+.footer-comment {
+  padding-left: 5px;
+}
+
+.footer-comment-block {
+  margin: 0 10px 10px 0;
+  padding: 5px;
+}
+
+.footer-all-comments a {
+  text-decoration: underline;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#copyright {
+  padding-top: 5px;
+  border-top: 1px solid black;
+  clear:both;
+}
