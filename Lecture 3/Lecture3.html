@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>layout</title>
+    <meta name="description" content="Layout" />
+    <link rel="stylesheet" type="text/css" href="Lecture3.css">
+  </head>
+
+  <body>
+    <div class="page">
+
+      <header id="header"> <!-- because you can have more than one header per page -->
+        <h2 id="site-name">Layout Example</h2> <!-- you should only have one h1 element per page, so start at 2, because main contains the h1 -->
+        <nav id="main-menu">
+          <h3 class="hidden">Main Navigation</h3> <!-- adding a new section, so you should make it an h3. It is a sibling of header which is an h2. Add a hidden class to everything you want to hide, but still allow screen readers to read it -->
+          <ul>
+            <li><a href="#">Link one</a></li>
+            <li><a href="#">Link two</a></li>
+            <li><a href="#">Link three</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main id="main"> <!-- id technically not needed, cauase you only have one main per page. Main is first, because of SEO and accessibility purposes -->
+        <h1>Layout Basics</h1>
+        <p>Some main content. <a href="#" class="button">A Link</a></p>
+      </main>
+
+      <aside id="sidebar-one">
+        <h2 class="list-block-title">Some Links</h2>
+        <ul class="list-block">
+          <li><a href="#">Link one</a></li>
+          <li><a href="#">Link two</a></li>
+          <li><a href="#">Link three</a></li>
+        </ul>
+        <p>Left sidebar content</p>
+      </aside>
+
+      <aside id="sidebar-two">
+        <p>Right sidebar content</p>
+      </aside>
+
+      <footer id="footer">
+        <p>Some Footer</p>
+      </footer>
+
+    </div>
+  </body>
+
+</html>

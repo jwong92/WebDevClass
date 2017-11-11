@@ -1,0 +1,125 @@
+/****************************************
+TABLE OF CONTENTS
+*****************************************
+* 1. GENERAL STYLES
+* 2. HEADER
+* 3. MENUS
+* 4. SIDEBARS
+*/
+
+html {
+  box-sizing: border-box; /*standard model is content-box, which is only available in IE, but doesn't get inherited by children*/
+}
+
+*, *::before, *::after { /*you want all the children to inherit this, so if someone changes the box sizing somewhere down the line, it will only change it for that one element. The * means all, ::before is a psuedo element, (vs one colon for a pseudo class). Pseudo elements are virtual elements, aren't real but exist. Before and After are imaginary elements that exist just before and just after an element, so you can insert stuff without importance to the main content */
+  box-sizing: inherit;
+}
+
+#header, main, #sidebar-one, #sidebar-two, #footer {
+  padding: 1em; /*padding wouldn't change the resposiveness, because you already made your containers responsive*/
+}
+
+main, #sidebar-one, #sidebar-two {
+  margin-bottom: 1em;
+}
+
+body {
+  background-color: lavender;
+}
+/* change with the div instead of body because if you want a background color, you'll have a white patch. If you did it on body, then you would need to set margins. Max-width allows responsiveness, and this max width will help with screen pages that aren't larger than this */
+
+a.button {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5em 0.8em;
+  text-decoration: none;
+  border-radius: 10px 5px; /*top left, top right, bottom left, bottom right*/
+}
+
+.page {
+  max-width: 1024px;
+  background-color: #fff;
+  margin: 0 auto 0 auto; /*top, right, bottom, left - makes the page center, and can be shortened to 0 auto */
+}
+
+/* you can use display none, or visibility none, but that hides it from screen readers. This way you still allow screen readers to see it */
+.hidden {
+  position: absolute;
+  left: -10000px;
+}
+
+/*relative units of em relative to the header default font size. The number is a multiplier*/
+#header {
+border: 1px dashed pink;
+margin-bottom: 1em;
+}
+
+/* curly braces have no semantic meaning, and can insert things like icons. Uses the content property and before/after pseudoelements that won't be read by screen readers - they are just decorative, and NOT important content. */
+#site-name::before {
+  content: '{';
+}
+
+#site-name::after {
+  content: '}';
+}
+
+/* you can remove it from li, but you need to use list-style-type instead of list-style */
+#main-menu ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+#main-menu li{
+  display: inline-block;
+  margin-right: 1.5em;
+}
+
+#main {
+  border: 1px dashed grey;
+  width: 50%;
+  margin: 0 2.5%; /* you took 2.5 off of each side-bar so that you could have a margin between each container */
+  display: inline-block; /* want to act like a block, but displayed inline with other elements. Display inline would mean they have NO set width or height. By default, span elements have NO width or height. Must be block or inline block. */
+}
+
+#sidebar-one {
+  border: 1px dashed forestgreen;
+  width: 22.5%;
+  float: left; /* allow block elements to be seen side by side */
+}
+
+#sidebar-two {
+  border: 1px dashed lightblue;
+  width: 22.5%;
+  float: right;
+}
+
+/*Have to clear because your sidebar and main floats will push into your footer, and make your footer content move. You want to make sure that your content doesn't merge into the footer.*/
+#footer {
+  border: 1px dashed red;
+  clear: both;
+}
+
+.list-block-title {
+  background-color: red;
+  color: #fff;
+  font: normal 1em/1 Helvetica; /*font-weight, font size/line height, font-family */
+  padding: 0.2em 0.5em;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.list-block {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.list-block li {
+  list-style-type: none;
+  padding: 0.2em 0.5em;
+  border-bottom: 1px solid pink;
+}
+
+.list-block li a {
+  text-decoration: none;
+  color: grey;
+}

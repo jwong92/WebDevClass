@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "utf-8" />
+    <title> Week 2 Example</title>
+  </head>
+
+  <body>
+    <h1>HTML Forms</h1>
+      <form action="wk2.html" method="post">
+        <!-- action - where the submission of the form will go. Method - can be either get or post. When you use get, the form data (all the fields of your form) will be used in the URL. If you use post, then the URL will be normal - won't show up in your URL. Ex. when you google something, a get is used, and the URL is shown - all the values of your form are stored. Submitting something through get, has a character limit. Post has no limit -->
+        <div> <!-- will make them block elements -->
+          <label for="name">Name:</label>
+          <!-- for attribute links the label to some input (or select or some area). It links to the form field id. When you click the "name", that will actomatically send the selection to the correct element for someone to type-->
+            <input type="text" id="name" name="username" placeholder="your name..." />
+        </div>
+          <!-- name attribute (one referring to username) doesn't coincide with the for attribute in label. This name attribute with "usename" will show up in your url and how you will access the data -->
+        <div>
+          <label for="email">Email:</label>
+            <input type="email" id="email" name="usermail" placeholder="jessica@example.com" />
+        </div>
+
+        <!--Fieldset typically not used, because its not pretty, but semantically radio buttons should be contained within fieldsets.-->
+        <fieldset>
+          <legend>Subscribe to newsletter</legend>
+          <div>
+            <input type="radio" id="yes" name="yesno" value="yes" />
+            <label for="yes">Yes</label>
+          </div>
+          <div>
+            <input type="radio" id="no" name="yesno" value="no" checked />
+            <!-- checked attribute makes sure that one or the other has been checked. They can't submit a non-answer. Basically a default check -->
+            <label for="no">No</label>
+          </div>
+            <!-- value will be the data that actually gets sent, what you will see. Name will let you know they are part of the same group, and will then only let you select one or the other. If you give them different names, you'd be able to select both yes and no at the same time -->
+          </fieldset>
+
+      <div>
+        <label for="reason">Reason for Enquiry:</label>
+        <select id="reason" name="reason">
+          <option value="sales">Sales Enquiry</option>
+          <option value="general" selected>General Enquiry</option>
+        </select>
+      </div>
+        <!--select is for a dropdown box. Option are what the options are for dropdown. Values are important because that is the data that gets sent to you after the form is submit. Here, the selected attribute is to ensure a default value - otherwise you can add a dummy value-->
+
+    <fieldset>
+      <legend>Check all that apply</legend>
+      <div>
+        <input type="checkbox" id="cats" name="cats" value="Cats" />
+        <label for="cats">Cats</label>
+      </div>
+      <div>
+        <input type="checkbox" id="dogs" name="dogs" value="Dogs" />
+        <label for="dogs">Dogs</label>
+      </div>
+      <div>
+        <input type="checkbox" id="birds" name="birds" value="birds" />
+        <label for="birds">Birds</label>
+      </div>
+    </fieldset>
+
+
+      <div>
+        <label for="message">Message</label>
+      </div>
+
+      <div>
+        <textarea id="message" name="message" placeholder="Leave a comment below!"></textarea>
+      </div>
+
+      <button type="submit" id="submit" name="submit">Submit</button>
+
+    </form>
+  </body>
+</html>
+
+<!--
+1. Don't use spaces in your names, id, or class names etc... use dashes or underscores

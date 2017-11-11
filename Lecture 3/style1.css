@@ -1,0 +1,51 @@
+/* P is your selector, and you can add spaces between your fonts but with commas it saves space. Selecting all paragraphs and giving them a font stack aka fall backs if user doesn't have the font on their computer/doesn't load. Whatever you style will cascade down to the children*/
+
+p {
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+/* Some font-weights can have a numbered weight for bolding. Having nothing would be "normal". You can add the class to whatever part of the html file you'd like to have it bolded */
+.important-text {
+  font-weight:bold;
+}
+
+/* selecting image which is a child of main */
+body > img {
+  border: 2px solid red;
+}
+
+a, a:link {
+  text-decoration: red;
+}
+
+a:visited {
+  text-decoration: green;
+}
+
+/* Pseudo class that accesses the DOM. As you manipulate the page, whatever the page changes to with the javaScript is the DOM (will change according to whatever happens).*/
+a:hover {
+  text-decoration:underline;
+}
+
+/* When mouse is down, but before it is lifted. Active has to be styled last, and anchor tags need to be in this order. Active must come after hover.*/
+a:active {
+  text-decoration: pink;
+}
+
+/* will look for list elements that are the first child, and cascade down*/
+li:first-child {
+  font-style: italic;
+  color: red;
+}
+
+li:last-child {
+  color: blue;
+}
+
+p:nth-child(3) {
+  text-decoration:line-through;
+}
+
+p:nth-child(2n+1) {
+  /* will give you odd children */
+}
