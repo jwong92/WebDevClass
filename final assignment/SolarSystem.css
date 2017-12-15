@@ -1,0 +1,113 @@
+
+
+/*DEFAULT*/
+html, body, main, header, aside, section, div {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*BACKGROUND*/
+body {
+  background-image: url("Images/background.png");
+  width: 100%;
+  background-size: auto;
+  background-position: absolute;
+  font-size: 10px;
+}
+
+.background-overlay {
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.2;
+  position: absolute;
+  background-size: cover;
+  background-image: url("Images/alpha-transparency.png");
+}
+
+.background-overlay2 {
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  opacity: 0.25;
+  position: absolute;
+  background-size: cover;
+  background-image: url("Images/Texture.jpg");
+}
+
+/*GALAXY*/
+#galaxy {
+  background-size: cover;
+  transform-style: preserve-3d;
+  transform: rotateX(75deg);
+  border: 4px solid red;
+}
+
+/*SUN*/
+
+#sun {
+  width: 15em;
+  height: 15em;
+  background-color: #FDB813;
+  border-radius: 50%;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  box-shadow: inset -0.5em -0.5em 0.2em rgba(52,61,70,0.5);
+  z-index: 0;
+  background-image: url();
+  transform: rotateX(-75deg);
+}
+
+/*MERCURY*/
+
+#mercury[class^="orbit"] {
+  width: 18em;
+  height: 18em;
+  /*position: absolute;*/
+  top: calc(50% - 9em);
+  left: calc(50% - 9em);
+  border: 0.2em solid #FFF;
+  /*border-radius: 50%;*/
+  -webkit-animation: mercuryO 3s linear infinite;
+     -moz-animation: mercuryO 3s linear infinite;
+      -ms-animation: mercuryO 3s linear infinite;
+       -o-animation: mercuryO 3s linear infinite;
+          animation: mercuryO 3s linear infinite;
+}
+
+#mercury > .planet {
+  width: 2em;
+  height: 2em;
+  background-color: rgba(230, 230, 230, 1);
+  border-radius: 50%;
+  position:absolute;
+  z-index: 1;
+  top: calc(100% - 1em);
+  right: calc(50% - 1em);
+  z-index: 1;
+  animation: mercuryShadow 3s linear infinite;
+}
+
+@keyframes mercuryO {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes mercuryShadow {
+  0% { box-shadow: inset 2em 2em rgba(101,115,126,0.5)}
+  50% { box-shadow: inset 2em 2em rgba(101,115,126,0.5)}
+}

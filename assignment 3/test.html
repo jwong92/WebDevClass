@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Mockup for Jessica's Homepage" />
+    <link rel="stylesheet" type="text/css" href="test.css" />
+    <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet" />
+    <title>Jessica's Profile</title>
+  </head>
+
+  <body>
+    <header id="header">
+      <section class="header-section-wrapper">
+        <div class="header-container-name">
+          <h1 id="header-text">Jessica Wong</h1>
+          <img id="header-logo" src="Images/icons/logo-s.svg" alt="Jessica Wong's Logo" />
+        </div>
+      </section>
+        <nav class="header-container-navbar">
+          <ul class="header-link-group">
+            <li class="header-link"><a href="#about" class="about-nav-link">about</a></li>
+            <li class="header-link"><a href="#work" class="work-nav-link">work</a></li>
+            <li class="header-link"><a href="#contact" class="contact-nav-link">contact</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main id="main">
+      <section class="about-section-wrapper">
+        <div class="about-flex">
+            <h2 class="about-main-header" id="about">About</h2>
+        </div>
+        <div class="about-flex">
+          <div class="about-photo-container">
+            <img src="Images/pp-s.png" alt="Profile Photo of Jessica"/>
+          </div>
+          <div class="about-descr-container">
+            <h3 class="about-subheading">Glad you stopped by</h3>
+            <p class="about-descr-text">My name is Jessica Wong, and I am a Full Stack Developer! It's a funny story actually. I graduated with a B.Sc in Microbiology, and worked in the pharmaceutical industry for 2 years, until I decided to pursue my passion for programming. Since then, I have never looked back. Programming has given me an undeniable passion, and something I look forward to doing each day. So now, not only am I a Microbiologist, I am a Web Developer, and a lifelong learner.</p>
+            <h3 class="about-subheading2">Check it out</h3>
+            <div class="about-flex about-icon-container">
+              <a href="#"><img class="book-logo" src="Images/icons/book-logo-s.svg"/></a>
+              <a href="#"><img class="www-logo" src="Images/icons/www-logo-s.svg" /> </a>
+            </div>
+            <div class="about-flex about-icon-text-container">
+              <a href="#" id="resume-about-link">Resume</a>
+              <a href="#" id="blog-about-link">Blog</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="work-section-wrapper">
+        <div class="work-flex">
+          <h2 class="work-main-header" id="work">Work</h2>
+        </div>
+        <div class="work-flex">
+          <div class="work-container-photo-descr">
+            <div class="work-photo-container">
+              <img src="Images/work-photos/FrontEndWork-s.png" alt="Professional Front End Work Photo" />
+            </div>
+            <h3 class="work-subheading2">Professional Projects</h3>
+            <p class="work-descr-text">Come take a look at some of the work I've done both academically and professionally. Expect to see HTML, CSS, JavaScript, ASP.net, and Oracle.</p>
+          </div>
+          <div class="work-container-photo-descr">
+            <div class="work-photo-container">
+              <img src="Images/work-photos/FrontEndWork2-s.png" alt="Personal Front End Work Photo" />
+            </div>
+            <h3 class="work-subheading2">Personal Projects</h3>
+            <p class="work-descr-text">Come take a look at some of the projects I do in my spare time! Expect to see a lot of HTML, CSS and JavaScript with a hint of random and a dash of Science</p>
+          </div>
+        </div>
+      </section>
+      <section class="contact-section-wrapper">
+        <div class="center-form">
+          <h2 class="contact-main-header" id="contact">Contact</h2>
+          <h3 class="contact-subheading">Questions? Comments? Concerns?</h3>
+          <p class="contact-descr-text">If you have a project in mind that you'd like to make happen together, get in touch! Simply tell me a little about yourself and your project below. I'll get back to you within 24 hours or less. Otherwise, I'm happy to hear from you regardless!</p>
+          <form name="contact-Me-Form" method="post">
+              <ul class="contact-form-list">
+                <li class="contact-container-label-input">
+                  <label class="name-label" for="name">Name</label>
+                  <input class="name-input" id="name" type="text" name="name" />
+                </li>
+                <li class="contact-container-label-input">
+                  <label class="name-label" for="email">Email</label>
+                  <input class="name-input" id="email" type="email" name="email" />
+                </li>
+                <li class="contact-container-label-input">
+                  <label class="name-label" for="comments">Comments</label>
+                  <textarea class="name-input" id="comments" type="text" name="comments"></textarea>
+              </ul>
+              <div class="contact-content-center">
+                <button id="submit_btn" type="submit" name="Submit the Contact Form">Submit</button>
+              </div>
+          </form>
+        </div>
+    </main>
+    <footer id="footer">
+      <div class="footer-background-color footer-center">
+        <section class="footer-section-wrapper">
+          <a href="#"><img src="Images/icons/logo-s.svg" id="footer-logo" alt="Jessica Wong's Logo" /></a>
+          <a href="https://github.com/jwong92" target="_blank"><img src="Images/icons/git-icon.svg" class="git-footer-icon" alt="Git icon link to Jessica's git account"></a>
+          <a href="https://www.facebook.com/jessica.wong.100" target="_blank"><img src="Images/icons/facebook-icon.svg" class="fb-footer-icon" alt="Facebook icon link to Jessica's facebook page"/></a>
+          <a href="https://www.linkedin.com/in/jesscwong/" target="_blank"><img src="Images/icons/LinkedIn-icon.svg" class="li-footer-icon" alt="LinkedIn icon to Jessica's linkedIn profile"/></a>
+            <p id="copyright">Copyright &copy; Jessica Wong</p>
+        </section>
+      </div>
+    </footer>
+  </body>
+
+</html>

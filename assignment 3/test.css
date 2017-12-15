@@ -1,0 +1,227 @@
+/*Adding fonts : https://stackoverflow.com/questions/7961721/how-do-i-install-a-custom-font-on-an-html-site */
+
+@font-face {font-family: 'Bebas'; src:url('Fonts/BEBAS.ttf'); }
+@font-face {font-family: 'News Cycle'; src:url('Fonts/NewsCycle-Regular.ttf');}
+
+
+/*DEFAULT VALUES*/
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Bebas', sans-serif;
+  font-size: 10px;
+  margin: 0;
+}
+
+/*USE EVERYWHERE*/
+
+section[class$="section-wrapper"] {
+  padding: 2rem;
+}
+
+h2[class$="main-header"]{
+  font-size: 70px;
+  margin-bottom: 4.375rem;
+  margin-top:4.327rem;
+}
+
+h3[class$="subheading"] {
+  font-size: 4em;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+h3[class$="subheading2"]{
+  font-size: 3.2em;
+}
+
+p[class$="descr-text"]{
+  font-family: 'News Cycle', sans-serif;
+  font-size: 2.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*HEADER*/
+
+#header-logo{
+  width: 150px;
+}
+
+.header-container-name {
+  display: flex;
+  flex-flow: row;
+  justify-content:space-between;
+  align-items: center;
+}
+
+#header-text {
+  font-size: 5em;
+}
+
+/*HEADER-NAV*/
+
+.header-container-navbar {
+  background-color: #D29C98;
+  padding: 2rem;
+}
+
+a[class$="nav-link"]{
+  font-size: 4em;
+  color: #000;
+}
+
+a[class$="nav-link"]:hover {
+  color: #FFF;
+}
+
+
+.header-link-group {
+  list-style-type: none;
+  -webkit-padding-start: 0px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.header-link {
+  display: inline;
+}
+
+/*ABOUT*/
+
+.about-flex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.about-descr-container {
+  width: 60%;
+}
+
+.about-descr-container > p:nth-child(2) {
+  font-family: 'News Cycle', sans-serif;
+  font-size: 2.5em;
+}
+
+.about-descr-container > h3:nth-of-type(2){
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.about-icon-text-container > a{
+  font-size: 2em;
+  font-family: 'News Cycle', sans-serif;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.about-icon-text-container > a:hover {
+  color: #D29C98;
+  font-weight: bold;
+}
+
+img[class$="logo"] {
+  width: 65px;
+  height: 65px;
+}
+
+/*WORK*/
+
+.work-flex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.work-container-photo-descr {
+  text-align: center;
+  padding: 2rem;
+}
+
+/*CONTACT*/
+
+.center-form {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.contact-main-header, .contact-subheading, .contact-descr-text {
+  text-align: center;
+}
+
+.contact-form-list {
+  list-style-type: none;
+  -webkit-padding-start: 0px;
+}
+
+label[class$="label"] {
+  display: block;
+  font-size: 2em;
+  font-family: 'News Cycle', sans-serif;
+  text-transform: uppercase;
+}
+
+textarea,input[class$="input"] {
+  width: 750px;
+  height: 50px;
+  font-size: 2em;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+textarea:last-child {
+  height: 200px;
+}
+
+/*CONTACT BUTTON*/
+#submit_btn {
+  background-color: #D29C98;
+  font-size: 2em;
+  color: #FFF;
+  text-transform: uppercase;
+  font-family: 'News Cycle', sans-serif;
+  border: none;
+  width: 300px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#submit_btn:hover {
+  background-color: #D2827D;
+  cursor: pointer;
+}
+
+.contact-content-center{
+  text-align: center;
+}
+
+/*FOOTER*/
+
+.footer-center {
+  text-align: center;
+}
+
+#footer-logo {
+  width: 80px;
+  display: block;
+  margin: 0 auto;
+}
+
+img[class$="footer-icon"] {
+  width: 65px;
+  margin: 1.25rem;
+}
+
+#copyright {
+  font-size: 2em;
+}
