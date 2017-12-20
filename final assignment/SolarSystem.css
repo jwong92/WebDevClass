@@ -47,67 +47,138 @@ body {
 #galaxy {
   background-size: cover;
   transform-style: preserve-3d;
+  width: 100vw;
+  height: 100vh;
   transform: rotateX(75deg);
-  border: 4px solid red;
 }
 
-/*SUN*/
+/*GENERIC*/
 
-#sun {
-  width: 15em;
-  height: 15em;
-  background-color: #FDB813;
-  border-radius: 50%;
+/*generic planets(and sun) position*/
+#sun, .planet {
   position: absolute;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
-  box-shadow: inset -0.5em -0.5em 0.2em rgba(52,61,70,0.5);
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  margin-left: -0.5em;
+  margin-top: -0.5em;
   z-index: 0;
-  background-image: url();
+}
+
+/*generic orbit position*/
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+}
+
+/*Generic Planet positions*/
+.planet {
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+}
+
+/*Sun specific properties*/
+#sun {
+  font-size: 15em;
+  background-color: #FDB813;
+  box-shadow: inset -0.1em -0.1em 0.2em rgba(52,61,70,0.5);
+  border-radius: 50%;
   transform: rotateX(-75deg);
 }
 
 /*MERCURY*/
-
-#mercury[class^="orbit"] {
-  width: 18em;
-  height: 18em;
-  /*position: absolute;*/
-  top: calc(50% - 9em);
-  left: calc(50% - 9em);
-  border: 0.2em solid #FFF;
-  /*border-radius: 50%;*/
-  -webkit-animation: mercuryO 3s linear infinite;
-     -moz-animation: mercuryO 3s linear infinite;
-      -ms-animation: mercuryO 3s linear infinite;
-       -o-animation: mercuryO 3s linear infinite;
-          animation: mercuryO 3s linear infinite;
+/*Orbit size specific to mercury*/
+#mercury.orbit {
+  width: 20em;
+  height: 20em;
+  margin-left: -10em;
+  margin-top: -10em;
+  border: 1px solid white;
+  transform-style: preserve-3d;
+  -webkit-animation: Orbit 5s linear infinite;
+     -moz-animation: Orbit 5s linear infinite;
+      -ms-animation: Orbit 5s linear infinite;
+       -o-animation: Orbit 5s linear infinite;
+          animation: Orbit 5s linear infinite;
+}
+/*Mercury specific positions*/
+#mercury .position {
+  left: 0%;
+  top: 50%;
+  position: absolute;
+  /*height: 3em;
+  width: 3em;
+  margin-left: -1.5em;
+  margin-top: -1.5em;*/
+  animation: position 5s linear infinite;
 }
 
-#mercury > .planet {
-  width: 2em;
-  height: 2em;
+#mercury .planet {
+  font-size: 2em;
   background-color: rgba(230, 230, 230, 1);
-  border-radius: 50%;
-  position:absolute;
-  z-index: 1;
-  top: calc(100% - 1em);
-  right: calc(50% - 1em);
-  z-index: 1;
-  animation: mercuryShadow 3s linear infinite;
+  animation: mercuryShadow 5s linear infinite;
 }
 
-@keyframes mercuryO {
-  0% {
-    transform: rotateZ(0deg);
-  }
-  100% {
-    transform: rotateZ(-360deg);
-  }
+/*Venus Specific Orbit Size*/
+#venus.orbit {
+  width:26.6em;
+  height:26.6em;
+  margin-left: -13.3em;
+  margin-top: -13.3em;
+  border: 1px solid white;
+  transform-style: preserve-3d;
+  -webkit-animation: Orbit 6s linear infinite;
+     -moz-animation: Orbit 6s linear infinite;
+      -ms-animation: Orbit 6s linear infinite;
+       -o-animation: Orbit 6s linear infinite;
+          animation: Orbit 6s linear infinite;
 }
 
+#venus .position {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform-style: preserve-3d;
+  animation: position 6s linear infinite;
+}
+
+/*VENUS*/
+#venus .planet {
+  font-size: 5em;
+  background-color: black;
+}
+
+
+
+
+
+
+
+/*KEYFRAMES*/
+
+/*GENERIC*/
+/*Planet Rotation Reposition*/
+@keyframes position {
+  0% {transform: rotateX(90deg)rotateZ(0deg) rotateY(0);}
+  100% {transform: rotateX(90deg) rotateZ(0deg) rotateY(360deg);}
+}
+
+/*MERCURY*/
+/*Mercury Orbit Rotation*/
+@keyframes Orbit {
+  0% {transform: rotateZ(0deg);}
+  100% {transform: rotateZ(-360deg);}
+}
+
+/*Mercury Shadow*/
 @keyframes mercuryShadow {
-  0% { box-shadow: inset 2em 2em rgba(101,115,126,0.5)}
-  50% { box-shadow: inset 2em 2em rgba(101,115,126,0.5)}
+  0% {box-shadow: inset 0em -0.3em 18px rgba(0, 0, 0, 0.5);}
+  25% {box-shadow: inset 0 -2em 18px rgba(0, 0, 0, 0.5);}
+  50% {box-shadow: inset 0em -0.1em 18px rgba(0, 0, 0, 0.5);}
+  75% {box-shadow: inset 0em -0.2em 18px rgba(0, 0, 0, 0.5);}
+  100% {box-shadow: inset 0em -0.2em 18px rgba(0, 0, 0, 0.5);}
 }
