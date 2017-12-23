@@ -179,6 +179,7 @@ body {
   margin-top: calc(((100vw - 101em)/2)*(-1));
   transform-style: preserve-3d;
   animation: Orbit 13.07s linear infinite;
+  border: 1px solid white;
 }
 
 #jupiter .planet {
@@ -198,16 +199,29 @@ body {
   margin-left: calc(((100vw - 85em)/2)*(-1));
   margin-top: calc(((100vw - 85em)/2)*(-1));
   animation: Orbit 29.3s linear infinite;
+  border: 1px solid white;
+  transform-style: preserve-3d;
 }
 
 #saturn .planet {
-  font-size: 12.103em;
-  background: PaleGoldenRod;
-}
-
-#saturn .position {
+  font-size: 12em;
+  background: repeating-linear-gradient(#7F796B, #ADA591 10%, #FFF2D6 20%, #ADA591 30%, #7F796B 40%);
   animation: position 29.3s linear infinite;
 }
+
+#saturn .ring {
+  border: 3px solid black;
+  background: radial-gradient(transparent 60%, #E5DCBD 10%, #292722);
+  width: 20em;
+  height: 20em;
+  transform-style: preserve-3d;
+  margin-left: -10em;
+  margin-top: -10em;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+
 
 
 /*URANUS*/
@@ -219,6 +233,7 @@ body {
   margin-top: calc(((100vw - 49em)/2)*(-1));
   transform-style: preserve-3d;
   animation: Orbit 41.7s linear infinite;
+  border: 1px solid white;
 }
 
 /*Uranus planet*/
@@ -238,9 +253,10 @@ body {
   height: calc(100vw - 10em);
   margin-left: calc(((100vw - 10em)/2)*(-1));
   margin-top: calc(((100vw - 10em)/2)*(-1));
-  border-radius: 50%;
   animation: Orbit 59.8s linear infinite;
   transform-style: preserve-3d;
+  border: 1px solid white;
+
 }
 
 /*Neptune planet*/
