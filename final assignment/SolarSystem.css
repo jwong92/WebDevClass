@@ -17,8 +17,8 @@ body {
   background-image: url("Images/background.png");
   width: 100%;
   background-size: auto;
-  background-position: absolute;
   font-size: 10px;
+  font-family: 'Lobster Two', sans-serif;
 }
 
 .background-overlay {
@@ -47,6 +47,14 @@ body {
   height: 100%;
   position: absolute;
   overflow: hidden;
+}
+
+#title {
+  font-size: 5em;
+  color: #FFF;
+  z-index: 2;
+  margin: 0;
+  text-align: center;
 }
 
 /*GALAXY*/
@@ -103,6 +111,9 @@ body {
   margin-left: calc(((100vw - 118em)/2)*(-1));
   margin-top: calc(((100vw - 118em)/2)*(-1));
   transform-style: preserve-3d;
+  -webkit-animation: Orbit 2s linear infinite;
+  -moz-animation: Orbit 2s linear infinite;
+  -o-animation: Orbit 2s linear infinite;
   animation: Orbit 2s linear infinite;
 }
 
@@ -112,6 +123,9 @@ body {
 }
 
 #mercury .position {
+  -webkit-animation: position 2s linear infinite;
+  -moz-animation: position 2s linear infinite;
+  -o-animation: position 2s linear infinite;
   animation: position 2s linear infinite;
 }
 
@@ -121,6 +135,9 @@ body {
   height: calc(100vw - 117em);
   margin-left: calc(((100vw - 117em)/2)*(-1));
   margin-top: calc(((100vw - 117em)/2)*(-1));
+  -webkit-animation: Orbit 3.5s linear infinite;
+  -moz-animation: Orbit 3.5s linear infinite;
+  -o-animation: Orbit 3.5s linear infinite;
   animation: Orbit 3.5s linear infinite;
   transform-style: preserve-3d;
 }
@@ -131,6 +148,9 @@ body {
 }
 
 #venus .position {
+  -webkit-animation: position 3.5s linear infinite;
+  -moz-animation: position 3.5s linear infinite;
+  -o-animation: position 3.5s linear infinite;
   animation: position 3.5s linear infinite;
 }
 
@@ -141,12 +161,18 @@ body {
   margin-left: calc(((100vw - 116em)/2)*(-1));
   margin-top: calc(((100vw - 116em)/2)*(-1));
   transform-style: preserve-3d;
+  -webkit-animation: Orbit 6.5s linear infinite;
+  -moz-animation: Orbit 6.5s linear infinite;
+  -o-animation: Orbit 6.5s linear infinite;
   animation: Orbit 6.5s linear infinite;
 }
 
 #earth .planet {
   font-size: 1.5em;
   background-image: radial-gradient(#58AD59, #2E2EAD);
+  -webkit-animation: position 6.5s linear infinite;
+  -moz-animation: position 6.5s linear infinite;
+  -o-animation: position 6.5s linear infinite;
   animation: position 6.5s linear infinite;
 }
 
@@ -159,9 +185,12 @@ body {
 }
 
 #earth .moon {
-  font-size: 0.3em;
+  font-size: 0.5em;
   background-color: white;
   left: 0%;
+  -webkit-animation: position 6.5s linear infinite;
+  -moz-animation: position 6.5s linear infinite;
+  -o-animation: position 6.5s linear infinite;
   animation: position 6.5s linear infinite;
 }
 
@@ -171,6 +200,9 @@ body {
   height: calc(100vw - 114em);
   margin-left: calc(((100vw - 114em)/2)*(-1));
   margin-top: calc(((100vw - 114em)/2)*(-1));
+  -webkit-animation: Orbit 11.8s linear infinite;
+  -moz-animation: Orbit 11.8s linear infinite;
+  -o-animation: Orbit 11.8s linear infinite;
   animation: Orbit 11.8s linear infinite;
   transform-style: preserve-3d;
 }
@@ -191,8 +223,11 @@ body {
   margin-left: calc(((100vw - 101em)/2)*(-1));
   margin-top: calc(((100vw - 101em)/2)*(-1));
   transform-style: preserve-3d;
+  -webkit-animation: Orbit 13.07s linear infinite;
+  -moz-animation: Orbit 13.07s linear infinite;
+  -o-animation: Orbit 13.07s linear infinite;
   animation: Orbit 13.07s linear infinite;
-  border: 1px solid white;
+  border: 0.5px solid white;
 }
 
 #jupiter .planet {
@@ -201,6 +236,9 @@ body {
 }
 
 #jupiter .position {
+  -webkit-animation: position 13.07s linear infinite;
+  -moz-animation: position 13.07s linear infinite;
+  -o-animation: position 13.07s linear infinite;
   animation: position 13.07s linear infinite;
 }
 
@@ -211,6 +249,9 @@ body {
   height: calc(100vw - 85em);
   margin-left: calc(((100vw - 85em)/2)*(-1));
   margin-top: calc(((100vw - 85em)/2)*(-1));
+  -webkit-animation: Orbit 29.3s linear infinite;
+  -moz-animation: Orbit 29.3s linear infinite;
+  -o-animation: Orbit 29.3s linear infinite;
   animation: Orbit 29.3s linear infinite;
   border: 1px solid white;
   transform-style: preserve-3d;
@@ -219,6 +260,9 @@ body {
 #saturn .planet {
   font-size: 12em;
   background: linear-gradient(#7F796B, #ADA591, #FFF2D6, #ADA591, #7F796B);
+  -webkit-animation: position 29.3s linear infinite;
+  -moz-animation: position 29.3s linear infinite;
+  -o-animation: position 29.3s linear infinite;
   animation: position 29.3s linear infinite;
 }
 
@@ -242,6 +286,9 @@ body {
   margin-left: calc(((100vw - 49em)/2)*(-1));
   margin-top: calc(((100vw - 49em)/2)*(-1));
   transform-style: preserve-3d;
+  -webkit-animation: Orbit 41.7s linear infinite;
+  -moz-animation: Orbit 41.7s linear infinite;
+  -o-animation: Orbit 41.7s linear infinite;
   animation: Orbit 41.7s linear infinite;
   border: 1px solid white;
 }
@@ -251,6 +298,9 @@ body {
   font-size: 5.27em;
   background: linear-gradient(#22657F, #44CAFF, #2F8BB0);
   transform-style: preserve-3d;
+  -webkit-animation: uPlanPos 41.7s linear infinite;
+  -moz-animation: uPlanPos 41.7s linear infinite;
+  -o-animation: uPlanPos 41.7s linear infinite;
   animation: uPlanPos 41.7s linear infinite;
 }
 
@@ -265,6 +315,120 @@ body {
   transform: rotateY(-75deg);
 }
 
+/*MILKYWAY*/
+
+[id^="rocks"].orbit {
+  width: calc(100vw - 20em);
+  height: calc(100vw - 20em);
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-left: calc(((100vw - 20em)/2) * (-1));
+  margin-top: calc(((100vw - 20em)/2) *(-1));
+  transform-style: preserve-3d;
+}
+
+[id^="rocks"] [class$="rock"] {
+  width: calc(100vw - 20em);
+  height: calc(100vw - 20em);
+}
+
+[id^="rocks"] [class^="rock"] {
+  position: absolute;
+  height: 1em;
+  width: 1em;
+  font-size: 1.5em;
+  background-color: #ADADAC;
+  transform-style: preserve-3d;
+  border-radius: 10px 10px 5px 8px;
+}
+
+#rocks.orbit {
+  -webkit-animation: Orbit 20s linear infinite;
+  -moz-animation: Orbit 20s linear infinite;
+  -o-animation: Orbit 20s linear infinite;
+  animation: Orbit 20s linear infinite;
+}
+
+#rocks2.orbit {
+  -webkit-animation: Orbit 40s linear infinite;
+  -moz-animation: Orbit 40s linear infinite;
+  -o-animation: Orbit 40s linear infinite;
+  animation: Orbit 40s linear infinite;
+}
+
+#rocks [class^="rock"] {
+  -webkit-animation: position 20s linear infinite;
+  -moz-animation: position 20s linear infinite;
+  -o-animation: position 20s linear infinite;
+  animation: position 20s linear infinite;
+}
+
+#rocks2 [class^="rock"] {
+  -webkit-animation: position 40s linear infinite;
+  -moz-animation: position 40s linear infinite;
+  -o-animation: position 40s linear infinite;
+  animation: position 40s linear infinite;
+}
+
+.rock-1 {
+  top: 50%;
+  left: 0%;
+  margin-left: 2em;
+}
+.rock-2{
+  top: 40%;
+  left: 0%;
+  margin-left: 3em;
+}
+
+.rock-3 {
+  top: 65%;
+  left: 0%;
+  margin-left: 4em;
+}
+
+.rock-4 {
+  top: 55%;
+  left: 0%;
+  margin-left: 3em;
+}
+
+.rock-5 {
+  top: 45%;
+  left: 0%;
+  margin-left: 5em;
+}
+
+.rock-6 {
+  top: 50%;
+  left: 100%;
+  margin-left: -2em;
+}
+
+.rock-7 {
+  top: 40%;
+  left: 100%;
+  margin-left: -3em;
+}
+
+.rock-8 {
+  top: 65%;
+  left: 100%;
+  margin-left: -4em;
+}
+
+.rock-9 {
+  top: 55%;
+  left: 100%;
+  margin-left: -3em;
+}
+
+.rock-10 {
+  top: 45%;
+  left: 100%;
+  margin-left: -5em;
+}
+
 /*NEPTUNE*/
 /*Neptune Orbit*/
 #neptune.orbit {
@@ -272,6 +436,9 @@ body {
   height: calc(100vw - 10em);
   margin-left: calc(((100vw - 10em)/2)*(-1));
   margin-top: calc(((100vw - 10em)/2)*(-1));
+  -webkit-animation: Orbit 59.8s linear infinite;
+  -moz-animation:Orbit 59.8s linear infinite;
+  -o-animation: Orbit 59.8s linear infinite;
   animation: Orbit 59.8s linear infinite;
   transform-style: preserve-3d;
   border: 1px solid white;
@@ -285,6 +452,9 @@ body {
 
 /*Neptune position*/
 #neptune .position {
+  -webkit-animation: position 59.8s linear infinite;
+  -moz-animation: position 59.8s linear infinite;
+  -o-animation: position 59.8s linear infinite;
   animation: position 59.8s linear infinite;
 }
 
@@ -292,18 +462,63 @@ body {
 
 /*GENERIC*/
 /*Planet Rotation Reposition*/
+@-webkit-keyframes position {
+  0% {transform: rotateX(90deg)rotateZ(0deg) rotateY(0);}
+  100% {transform: rotateX(90deg) rotateZ(0deg) rotateY(360deg);}
+}
+@-moz-keyframes position {
+  0% {transform: rotateX(90deg)rotateZ(0deg) rotateY(0);}
+  100% {transform: rotateX(90deg) rotateZ(0deg) rotateY(360deg);}
+}
+@-o-keyframes position {
+  0% {transform: rotateX(90deg)rotateZ(0deg) rotateY(0);}
+  100% {transform: rotateX(90deg) rotateZ(0deg) rotateY(360deg);}
+}
 @keyframes position {
   0% {transform: rotateX(90deg)rotateZ(0deg) rotateY(0);}
   100% {transform: rotateX(90deg) rotateZ(0deg) rotateY(360deg);}
 }
 
 /*Orbit Rotation*/
+@-webkit-keyframes Orbit {
+  0% {transform: rotateZ(0deg);}
+  100% {transform: rotateZ(-360deg);}
+}
+@-moz-keyframes Orbit {
+  0% {transform: rotateZ(0deg);}
+  100% {transform: rotateZ(-360deg);}
+}
+@-o-keyframes Orbit {
+  0% {transform: rotateZ(0deg);}
+  100% {transform: rotateZ(-360deg);}
+}
 @keyframes Orbit {
   0% {transform: rotateZ(0deg);}
   100% {transform: rotateZ(-360deg);}
 }
 
 /*Mercury Shadow*/
+@-webkit-keyframes mercuryShadow {
+  0% {box-shadow: inset 0em -0.3em 18px rgba(0, 0, 0, 0.5);}
+  25% {box-shadow: inset 0 -2em 18px rgba(0, 0, 0, 0.5);}
+  50% {box-shadow: inset 0em -0.1em 18px rgba(0, 0, 0, 0.5);}
+  75% {box-shadow: inset 0em -0.2em 18px rgba(0, 0, 0, 0.5);}
+  100% {box-shadow: inset 0em -0.2em 18px rgba(0, 0, 0, 0.5);}
+}
+@-moz-keyframes mercuryShadow {
+  0% {box-shadow: inset 0em -0.3em 18px rgba(0, 0, 0, 0.5);}
+  25% {box-shadow: inset 0 -2em 18px rgba(0, 0, 0, 0.5);}
+  50% {box-shadow: inset 0em -0.1em 18px rgba(0, 0, 0, 0.5);}
+  75% {box-shadow: inset 0em -0.2em 18px rgba(0, 0, 0, 0.5);}
+  100% {box-shadow: inset 0em -0.2em 18px rgba(0, 0, 0, 0.5);}
+}
+@-o-keyframes mercuryShadow {
+  0% {box-shadow: inset 0em -0.3em 18px rgba(0, 0, 0, 0.5);}
+  25% {box-shadow: inset 0 -2em 18px rgba(0, 0, 0, 0.5);}
+  50% {box-shadow: inset 0em -0.1em 18px rgba(0, 0, 0, 0.5);}
+  75% {box-shadow: inset 0em -0.2em 18px rgba(0, 0, 0, 0.5);}
+  100% {box-shadow: inset 0em -0.2em 18px rgba(0, 0, 0, 0.5);}
+}
 @keyframes mercuryShadow {
   0% {box-shadow: inset 0em -0.3em 18px rgba(0, 0, 0, 0.5);}
   25% {box-shadow: inset 0 -2em 18px rgba(0, 0, 0, 0.5);}
@@ -313,6 +528,18 @@ body {
 }
 
 /*Uranus Rotation*/
+@-webkit-keyframes uPlanPos {
+  0% {transform: rotateX(90deg);}
+  100% {transform: rotateX(450deg);}
+}
+@-moz-keyframes {
+  0% {transform: rotateX(90deg);}
+  100% {transform: rotateX(450deg);}
+}
+@-o-keyframes uPlanPos {
+  0% {transform: rotateX(90deg);}
+  100% {transform: rotateX(450deg);}
+}
 @keyframes uPlanPos {
   0% {transform: rotateX(90deg);}
   100% {transform: rotateX(450deg);}
@@ -357,6 +584,12 @@ body {
 }
 
 @media all and (max-width: 400px) {
+  #universe {
+    font-size: 25%;
+  }
+}
+
+@media all and (max-width: 300px) {
   #universe {
     font-size: 20%;
   }
