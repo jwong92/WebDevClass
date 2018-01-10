@@ -1,21 +1,27 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="SolarSystem.css" />
     <meta charset="utf-8" />
     <meta name="description" content="Jessica's Solar System" />
     <title>Solar System</title>
-    <link type="text/css" rel="stylesheet" href="SolarSystem.css" />
-    <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+    <script type="text/javascript" src="SolarSystem.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Roboto+Condensed" rel="stylesheet">
   </head>
   <body>
-    <main>
-      <div class="background-overlay"></div>
-      <div class="background-overlay2"></div>
-
+    <div class="background-overlay"></div>
+    <div class="background-overlay2"></div>
     <div id="universe">
+      <header id="header">
+        <h1 id="title">Our Solar System</h1>
+      </header>
+    <main>
+
       <div id="galaxy">
-
-
         <div id="sun"></div>
         <div id="mercury" class="orbit">
           <div class="position">
@@ -50,10 +56,6 @@
           </div>
         </div>
 
-        <div id="milkyway" class="orbit">
-          <div class="stars"></div>
-          </div>
-
         <div id="uranus" class="orbit">
           <div class="position ring">
             <div class="planet"></div>
@@ -85,11 +87,50 @@
             <div class="planet"></div>
           </div>
         </div>
+
       </div>
-    </div>
-
-    <h1 id="title">Our Solar System</h1>
-
+      <!-- END GALAXY -->
     </main>
+
+    <footer id="footer">
+      <div class="planet-text-container">
+        <p class="text-1">Mercury</p>
+        <p class="text-2">Venus</p>
+        <p class="text-3">Earth</p>
+        <p class="text-4">Moon</p>
+        <p class="text-5">Mars</p>
+        <p class="text-6">Jupiter</p>
+        <p class="text-7">Saturn</p>
+        <p class="text-8">Uranus</p>
+        <p class="text-9">Neptune</p>
+      </div>
+    </footer>
+
+    <aside class="pop-up-container hidden">
+      <p>X</p>
+      <div class="planet-picture-container">
+        <h2 id="selPlanet">.text-</h2>
+        <div class="img-container">
+          <div class="planet-x"></div>
+        </div>
+      </div>
+      <p id="selPlanetDescr">.descr-</p>
+    </div>
+  </aside>
+
+  <aside class="description-container hidden">
+    <p class="descr-1">Mercury is the closest planet to the Sun. It orbits in a highly elliptical orbit ranging from 46 million km (29 million miles) from the Sun out to 70 million km (43.5 million miles). It takes about 88 Earth days to orbit the Sun but rotates on its axis once every 59 Earth days. Because of the slow rotation, a single day on Mercury (mid day to mid day) takes 176 Earth days. Its axial tilt is remarkably small at 3/100ths of a degree. Much smaller than any other planet. Mercury is quite small with a diameter of 4,878km, (2/5ths that of Earth) and only 5% of Earth’s mass. Its gravity on the surface is 1/3rd of Earth’s.</p>
+    <p class="descr-2">Venus is the second closest planet to the Sun and orbits in an almost circular orbit at 108 million km. As it orbits, Venus comes closer to Earth than any other planet in the solar system and can come to within about 40 million km. Venus, with a diameter of 12100 km, it is very nearly the same size as Earth (1000km smaller), and has 80% of Earth’s mass. its gravity on the surface is 90% that of Earth’s.</p>
+    <p class="descr-3">The third closest planet to the Sun is Earth and is the largest and densest of the inner planets. Earth orbits in a reasonably circular at 150 million km and is the first of the planets to have a moon. Earth is of course the only place that we know of that has life. Earth takes 365.25 Earth days to orbit the Sun and rotates once every 23 hours, 56 minutes and 4 seconds. Because it rotates around the Sun the length of a day on Earth (sunrise to sunrise) takes 24 hours.</p>
+    <p class="descr-4">The Moon is 3,474km in diameter (27% that of Earth) and orbits at a distance of between about 362,000 to 405,000 km. It has also been affected by the gravitational pull of the Earth which has over time caused the Moon's rotation to be slowed until it matches the time it takes to orbit the Earth. This is why the same side of the Moon always faces the Earth.</p>
+    <p class="descr-5">Mars is the fourth closest planet to the Sun and orbits in an fairly eccentric orbit at around 230 (+-20) million km. Mars is about half the size of the Earth with a diameter of 6,792km. However its mass is only a tenth of Earth’s with gravity on the surface being around 37% that of Earth’s.</p>
+    <p class="descr-6">Jupiter is the fifth closest planet to the Sun and is the first of what are called the outer planets (being outside the asteroid belt). It is by far the largest planet in the solar system having two and a half times as much mass as all the other planets put together and one thousandth the mass of the Sun. This is so large that the Sun and Jupiter actually orbit each other about a point just outside of the Suns surface.</p>
+    <p class="descr-7">Saturn is the sixth closest planet to the Sun. It is the second largest planet in the solar system having a radius 9 times that of Earth (57,000 km) and a mass 95 times that of Earth. Saturn's core is quite hot (11,700 degrees C) and it generates more heat than it receives from the Sun. The further from the planets centre, the less the temperature with the temperature reaching around -180 degrees in the upper atmosphere, and 0 degrees C at around 350km deep.</p>
+    <p class="descr-8">Uranus is the seventh closest planet to the Sun and the third largest and fourth heaviest of the planets. It diameter (50,000km) is four times that of Earth with a mass over 14 times that of Earth. Uranus has the second most extensive ring system of the solar system after Saturn. The rings, which are very difficult to see from ground based observations, were first discovered in 1977 by measuring the intensity of a star as Uranus and its rings passed in front of it. There are 13 known rings with radii of 38,000km to 98,000km. They are comprised of ice and some darker material which results in them being much darker than the rings of Saturn.</p>
+    <p class="descr-9">Neptune is the eighth closest planet to the Sun and is (since the relegation of Pluto) the last Planet in the Solar System. It is similar in size and composition to Uranus with a diameter of 49,000km and a mass of over 17 times that of Earth. Uranus orbits the Sun once very 165 years at about 4500 million km. This is 30 times the distance from the Sun to the Earth which means that the strength of sunlight at Neptune is 1% of its strength at Earth. Neptune spins on an axis with a tilt of 28 degrees, which is quite similar to that of the Earth, every 16 hours.</p>
+
+
+  </aside>
+  <!-- END UNIVERSE -->
   </body>
 </html>
