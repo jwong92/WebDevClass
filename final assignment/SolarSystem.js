@@ -10,7 +10,7 @@ var planetNum = 9;
 for (var i=1; i<=planetNum; i++) {
   $(".text-"+[i]).click({value:i}, function(e) {
     //Show pop up box
-    $(".pop-up-container").removeClass("hidden");
+    $("#hidden-class").removeClass("hidden");
     //remove the previous class
     $(".planet-x").removeClass(currClass);
   //Clear planet photo classes
@@ -37,7 +37,7 @@ for (var i=1; i<=planetNum; i++){
 
 // Close the box
 $(".pop-up-container p:first-child").click(function(){
-  $(".pop-up-container").addClass("hidden");
+  $("#hidden-class").addClass("hidden");
 })
 
 $(".pop-up-container p:first-child").mouseover(function(){
