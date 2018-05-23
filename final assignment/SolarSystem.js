@@ -1,7 +1,6 @@
 $(window).ready(function(){
 
 //Associate the click event to information, to the appropriate CONTAINER
-
 var currClass;
 var currPlanet;
 
@@ -11,6 +10,8 @@ for (var i=1; i<=planetNum; i++) {
   $(".text-"+[i]).click({value:i}, function(e) {
     //Show pop up box
     $("#hidden-class").removeClass("hidden");
+    //hide the text box of planets
+    $(".planet-text-row").toggle("hidden");
     //remove the previous class
     $(".planet-x").removeClass(currClass);
   //Clear planet photo classes
@@ -28,6 +29,16 @@ for (var i=1; i<=planetNum; i++) {
   })
 }
 
+// bring back the text box of planets on click of X or of the selPlanDescr
+$("#close").click(function(){
+  //show the text box of planets
+  $(".planet-text-row").toggle("hidden");
+})
+
+$("#selPlanetDescr").click(function(){
+  $(".planet-text-row").toggle("hidden");
+})
+
 // Change cursor on hover
 for (var i=1; i<=planetNum; i++){
   $(".text-"+[i]).mouseover({value: i}, function(e){
@@ -43,7 +54,6 @@ $(".pop-up-container p:first-child").click(function(){
 $(".pop-up-container p:first-child").mouseover(function(){
   $(this).css("cursor", "pointer");
 })
-
 
 //check the current size of the planet
 function planetSize(planetName, planetClass) {

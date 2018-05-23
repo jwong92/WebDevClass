@@ -55,11 +55,20 @@ html {
 
 /* BACKGROUND */
 body {
-  background-image: url("Images/background.png");
   width: 100%;
   background-size: auto;
   font-size: 10px;
-  font-family: 'Lobster Two', sans-serif;
+  font-family: 'Alegreya Sans SC', 'Helvetica', sans-serif;
+  font-weight: lighter;
+  text-transform: lowercase;
+}
+
+.background {
+    background-image: url("Images/background.png");
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
 }
 
 .background-overlay {
@@ -85,7 +94,7 @@ body {
 /* UNIVERSE */
 #universe {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   position: absolute;
   overflow: hidden;
 }
@@ -95,7 +104,7 @@ body {
   background-size: cover;
   transform-style: preserve-3d;
   max-width: 100%;
-  height: 70vh;
+  height: 60vh;
   transform: rotateX(75deg);
 }
 
@@ -508,23 +517,20 @@ body {
 
 /* POP UP CONTAINER */
 .pop-up-container {
-  width: 80em;
-  height: 45em;
-  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0.25turn, #3f87a68c, #ebf8e1, #f6ce3c82);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -40em;
-  margin-top: -26em;
-  border-radius: 10px;
+  top: 0%;
+  left: 0%;
   padding: 2rem;
   display: flex;
   justify-content: space-around;
-  z-index: 3;
+  z-index: 4;
 }
 
-.pop-up-container p:first-child {
-  font-family: 'Roboto Condensed', sans-serif;
+#close {
+  font-family: 'Open Sans', 'Helvetica', sans-serif;
   position: absolute;
   right: 2rem;
   top: 2rem;
@@ -555,37 +561,40 @@ body {
 }
 
 #selPlanetDescr {
-  width: 40%;
-  border: 1px solid #000;
-  border-radius: 10px;
+  /* border: 1px solid #000; */
   overflow-y: scroll;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Open Sans', 'Helvetica', sans-serif;
   font-size: 2em;
   padding: 1.5rem;
+  color:#4e4e4e;
+}
+
+.pop-up-container-row {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
 }
 
 /* FOOTER */
-.planet-text-container {
+#footer {
   position: absolute;
-  z-index: 3;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  bottom: 3rem;
+  bottom: 0;
   width: 100%;
-  padding: 1rem;
-  font-size: 2.5em;
+  margin-bottom: 1rem;
+  z-index: 3;
+}
+.planet-text {
+  border: 1px solid white;
+  font-size: 2em;
+  color: white;
+  margin: 1rem 0.5rem 0.5rem 1rem;
+  text-align: center;
 }
 
-p[class^="text"] {
-  display: inline;
-  color: #FFF;
-  margin: 0rem 1.5rem 1.5rem 0rem;
-  border: 1px solid #FFF;
-  padding: 0.5rem;
-  border-radius: 5px;
+.planet-text-row {
+  justify-content: center;
 }
-
 /* KEYFRAMES */
 
 /* Planet Rotation Reposition */
@@ -629,7 +638,7 @@ p[class^="text"] {
   0% {transform: rotateX(90deg);}
   100% {transform: rotateX(450deg);}
 }
-@-moz-keyframes {
+@-moz-keyframes uPlanPos {
   0% {transform: rotateX(90deg);}
   100% {transform: rotateX(450deg);}
 }
@@ -647,22 +656,11 @@ p[class^="text"] {
   #universe {
     font-size: 80%;
   }
-  #pop-up-container {
-    width: 50%;
-    height: 50%;
-    margin-left: -25%;
-    margin-top: -20%;
-  }
 }
 
 @media all and (max-width: 1130px) {
   #universe {
     font-size: 70%;
-  }
-  #pop-up-container {
-    width: 50%;
-    height: 50%;
-    margin-left: -25%;
   }
 }
 
@@ -670,49 +668,29 @@ p[class^="text"] {
   #universe {
     font-size: 60%;
   }
-  #pop-up-container {
-    width: 60%;
-    height: 50%;
-    margin-left: -30%;
-    margin-top: -25%;
-  }
 }
 
 @media all and (max-width: 850px) {
   #universe {
     font-size: 50%;
   }
-  #pop-up-container {
-    width: 70%;
-    height: 50%;
-    margin-left: -35%;
-    margin-top: -25%;
+}
+
+@media all and (max-width: 768px) {
+  .planet-text {
+    margin: 0.5rem 0px 0px 0px;
   }
-  #selPlanetDescr {
-    font-size: 3em;
+  #galaxy {
+    height: 40vh;
+  }
+  #title {
+    font-size: 5em;
   }
 }
 
 @media all and (max-width: 700px) {
   #universe {
     font-size: 40%;
-  }
-  #pop-up-container {
-    width: 75%;
-    height: 50%;
-    margin-left: -37.5%;
-    margin-top: -40%;
-    padding: 0.5rem;
-  }
-  #selPlanet {
-    font-size: 8em;
-  }
-  #selPlanetDescr {
-    font-size: 5em;
-  }
-  #pop-up-container p:first-child {
-    right: 0.75rem;
-    font-size: 4em;
   }
   .planet-text-container {
     flex-flow: column nowrap;
@@ -727,55 +705,19 @@ p[class^="text"] {
   #universe {
     font-size: 30%;
   }
-  #pop-up-container {
-      width: 80%;
-      height: 50%;
-      margin-left: -40%;
-      margin-top: -45%;
-      padding: 0.5rem;
-    }
-    #selPlanet {
-      font-size: 8em;
-    }
-    #selPlanetDescr {
-      font-size: 5em;
-    }
+  #selPlanetDescr {
+    font-size: 16px;
   }
+}
 
 @media all and (max-width: 400px) {
   #universe {
     font-size: 25%;
-  }
-  #pop-up-container {
-    width: 85%;
-    height: 55%;
-    margin-left: -42.5%;
-    margin-top: -55%;
-    padding: 0.5rem;
-  }
-  #selPlanet {
-    font-size: 8em;
-  }
-  #selPlanetDescr {
-    font-size: 5em;
   }
 }
 
 @media all and (max-width: 300px) {
   #universe {
     font-size: 20%;
-  }
-  #pop-up-container {
-    width: 90%;
-    height: 55%;
-    margin-left: -45%;
-    margin-top: -55%;
-    padding: 0.5rem;
-  }
-  #selPlanet {
-    font-size: 8em;
-  }
-  #selPlanetDescr {
-    font-size: 5em;
   }
 }
